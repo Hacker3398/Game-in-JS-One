@@ -1,3 +1,9 @@
+alert(`Para a visualização do Código:
+Precione "H" para ver o HTML5;
+Precione "C" para ver o CSS3;
+Precione "J" para ver o JavaScript.
+Ou se for mais experiente, precione "Crtl" + "u" e navegue.`)
+
 // variaveis do jogo
 
 let canvas, ctx, height, width, frames = 0, max_jumps = 3,
@@ -77,8 +83,20 @@ function main()/* principal */ {
     document.addEventListener('keydown', (event) => {
         switch (event.key) {
             case 'w':
+            case ' ': 
             case 'ArrowUp': block.jump();
             break;
+
+            case 'H':
+            case 'h':   window.open('index.txt', '_blank');
+            break;
+
+            case 'C':
+            case 'c':   window.open('style.css', '_blank');
+            break;
+
+            case 'J':
+            case 'j':   window.open('script.js', '_blank');
         }
     })
 
